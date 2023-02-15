@@ -51,7 +51,7 @@ function api.keysystem:CorrectKey(ui)
     Console.BackgroundColor3 = Color3.fromRGB(81, 81, 81)
     Console.Position = UDim2.new(0.685900748, 0, 0.0290064346, 0)
     Console.Size = UDim2.new(0, 580, 0, 1025)
-    Console.Visible = false
+    Console.Visible = true
 
     UICorner.Parent = Console
 
@@ -111,6 +111,12 @@ function api.keysystem:CorrectKey(ui)
         end
     end)
 
+    game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessedEvent)
+        if input.KeyCode == Enum.KeyCode.RightAlt then
+            Console.Visible = false
+        end
+    end)
+
     return
 
 end
@@ -146,7 +152,7 @@ function api.loader:FinishedLoading(ui)
     KeySystem.BorderSizePixel = 0
     KeySystem.Position = UDim2.new(0.282586038, 0, 0.281481475, 0)
     KeySystem.Size = UDim2.new(0, 834, 0, 472)
-    KeySystem.Visible = false
+    KeySystem.Visible = true
 
     ImageLabel_2.Parent = KeySystem
     ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -322,7 +328,7 @@ function api:Init()
     Loader.BorderSizePixel = 0
     Loader.Position = UDim2.new(0.282586038, 0, 0.281481475, 0)
     Loader.Size = UDim2.new(0, 834, 0, 472)
-    Loader.Visible = false
+    Loader.Visible = true
 
     ImageLabel.Parent = Loader
     ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
