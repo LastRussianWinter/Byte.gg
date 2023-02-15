@@ -22,7 +22,7 @@ function api.console:Print(ui, message)
 
         return
     else
-        rconsoleprint(message)
+        rconsoleprint("\n"..message)
         return
     end
 end
