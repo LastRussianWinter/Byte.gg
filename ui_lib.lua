@@ -113,7 +113,7 @@ function api.keysystem:CorrectKey(ui)
 
     game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessedEvent)
         if input.KeyCode == Enum.KeyCode.RightAlt then
-            Console.Visible = false
+            Console.Visible = not Console.Visible
         end
     end)
 
